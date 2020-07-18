@@ -17,7 +17,9 @@ Typora一直是我认为桌面端笔记应用应有的终极形态。用我之�
 
 ## Typora是什么？
 
-$$e^{ix}+1=0$$
+$$
+e^{ix}+1=0
+$$
 
 ```python
 def is_set(cards):
@@ -29,10 +31,11 @@ def is_set(cards):
     return True
 ```
 
-```sequence
+{{< mermaid >}}
+sequenceDiagram
 Apple -> Banana: Hello, How are you?
 Note right of Banana: Thinking...
 Banana --> Apple: I'm fine, thanks.
-```
+{{< /mermaid >}}
 
 
