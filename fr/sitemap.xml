@@ -2,42 +2,42 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://jcai.info/zh-cn/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://jcai.info/fr/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://jcai.info/categories/"
                         /><xhtml:link
                         rel="alternate"
-                        hreflang="fr"
-                        href="https://jcai.info/fr/categories/"
+                        hreflang="zh-cn"
+                        href="https://jcai.info/zh-cn/categories/"
                         /><xhtml:link
                     rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://jcai.info/zh-cn/categories/"
+                    hreflang="fr"
+                    href="https://jcai.info/fr/categories/"
                     /></url><url>
-            <loc>https://jcai.info/zh-cn/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://jcai.info/fr/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://jcai.info/"
                         /><xhtml:link
                         rel="alternate"
-                        hreflang="fr"
-                        href="https://jcai.info/fr/"
+                        hreflang="zh-cn"
+                        href="https://jcai.info/zh-cn/"
                         /><xhtml:link
                     rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://jcai.info/zh-cn/"
+                    hreflang="fr"
+                    href="https://jcai.info/fr/"
                     /></url><url>
-            <loc>https://jcai.info/zh-cn/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://jcai.info/fr/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://jcai.info/tags/"
                         /><xhtml:link
                         rel="alternate"
-                        hreflang="fr"
-                        href="https://jcai.info/fr/tags/"
+                        hreflang="zh-cn"
+                        href="https://jcai.info/zh-cn/tags/"
                         /><xhtml:link
                     rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://jcai.info/zh-cn/tags/"
+                    hreflang="fr"
+                    href="https://jcai.info/fr/tags/"
                     /></url></urlset>
