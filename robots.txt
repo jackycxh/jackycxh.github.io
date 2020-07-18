@@ -61,4 +61,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: https://jcai.info/sitemap.xml
+Sitemap: https://jcai.info/en/sitemap.xml
