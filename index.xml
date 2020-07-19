@@ -12,28 +12,36 @@
     <pubDate>Tue, 07 Mar 2017 20:36:42 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://jcai.info/migrate-from-wordpress/</guid>
-    <description><![CDATA[上一篇文章里我介绍了怎样用Hexo在Github上搭建静态博客。 有很多人之前可能都在其它地方用Wordpress写过博客，而且里面可能已经有]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/Migrate-from-wordpress.jpg" referrerpolicy="no-referrer">
+            </div>上一篇文章里我介绍了怎样用Hexo在Github上搭建静态博客。 有很多人之前可能都在其它地方用Wordpress写过博客，而且里面可能已经有]]></description>
 </item><item>
     <title>如何使用Hexo在Github上搭建静态博客</title>
     <link>https://jcai.info/how-to-blog-with-hexo-over-github/</link>
     <pubDate>Fri, 17 Feb 2017 12:00:19 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://jcai.info/how-to-blog-with-hexo-over-github/</guid>
-    <description><![CDATA[Hexo 是一个快速，简单的静态博客框架。使用者在本地使用markdown格式编辑博客文章，然后使用Hexo在几秒时间内生成静态HTML文件，并发布]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/how-to-blog-with-hexo-over-github.png" referrerpolicy="no-referrer">
+            </div>Hexo 是一个快速，简单的静态博客框架。使用者在本地使用markdown格式编辑博客文章，然后使用Hexo在几秒时间内生成静态HTML文件，并发布]]></description>
 </item><item>
     <title>mGRE - multipoint GRE tunnel</title>
     <link>https://jcai.info/mgre-multipoint-gre-tunnel/</link>
     <pubDate>Thu, 12 Jun 2014 13:55:56 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://jcai.info/mgre-multipoint-gre-tunnel/</guid>
-    <description><![CDATA[Features  tunnels between each two sites, traffics between spoke sites don&rsquo;t need to pass the hub site.  permanent tunnel between Hub site and each Spoke site dynamic tunnel between Spoke sites on demand   simplify the configuration In Spoke site, static IP address is not required. static IP address is required only in Hub site.  How is it working  Hub site works as a NHRP server and ready to accept the register from the spoke sites Spoke sites register their IP to the Hub site(NHRP server).]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/mgre-multipoint-gre-tunnel.jpg" referrerpolicy="no-referrer">
+            </div>Features  tunnels between each two sites, traffics between spoke sites don&rsquo;t need to pass the hub site.  permanent tunnel between Hub site and each Spoke site dynamic tunnel between Spoke sites on demand   simplify the configuration In Spoke site, static IP address is not required. static IP address is required only in Hub site.  How is it working  Hub site works as a NHRP server and ready to accept the register from the spoke sites Spoke sites register their IP to the Hub site(NHRP server).]]></description>
 </item><item>
     <title>Cisco IOS configuration file auto backup and rollback</title>
     <link>https://jcai.info/cisco-ios-configuration-file-auto-backup-and-rollback/</link>
     <pubDate>Fri, 03 May 2013 10:17:24 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://jcai.info/cisco-ios-configuration-file-auto-backup-and-rollback/</guid>
-    <description><![CDATA[Since IOS ver 12.3(4), Cisco introduced the Archive mode into the IOS which could be used for backup the configuration file automatically and roll back the configuration to an earlier version. Below are some IOS commands for this.
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cisco-ios-configuration-file-auto-backup-and-rollback.png" referrerpolicy="no-referrer">
+            </div>Since IOS ver 12.3(4), Cisco introduced the Archive mode into the IOS which could be used for backup the configuration file automatically and roll back the configuration to an earlier version. Below are some IOS commands for this.
 1 2 3 4 5  Router&gt; enable !Enter privilige mode Router# configure terminal !Enter configuration mode Router(config)# archive !Enter archive mode Router(config-archive)# write-memory !Enable automatic backup during write memory Router(config-archive)# path URL !]]></description>
 </item><item>
     <title>How to block the incoming phone call from a particular calling number in H323 voice gateway</title>
@@ -41,7 +49,9 @@
     <pubDate>Sat, 10 Sep 2011 01:47:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/</guid>
-    <description><![CDATA[ create a translation rule that reject the calling number.  1 2  voice translation-rule 99 rule 1 reject /1234567890/   create a translation-profile match the calling number to the created translation-rule.  1 2  voice translation-profile block-incoming-call-from translate calling 99   add call block configuration to dial peer.  1 2  dial-peer voice 10 call block translation-profile incoming block-incoming-call-from   ]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway.jpg" referrerpolicy="no-referrer">
+            </div> Create a translation rule that reject the calling number.  1 2  voice translation-rule 99 rule 1 reject /1234567890/   Create a translation-profile match the calling number to the created translation-rule.  1 2  voice translation-profile block-incoming-call-from translate calling 99   Add call block configuration to dial peer.  1 2  dial-peer voice 10 call block translation-profile incoming block-incoming-call-from   ]]></description>
 </item><item>
     <title>Caller ID receive and call disconnect problem for FXO ports</title>
     <link>https://jcai.info/caller-id-recieve-and-call-disconnect-problem-for-fxo-ports-2/</link>

@@ -2,10 +2,10 @@
 
 
 add commands to the gateway to fix the issue.
-```
-voice service voip</span>
- h323</span>
- call preserve</span></div>
-```
 
+```
+voice service voip
+ h323
+ call preserve
+```
 

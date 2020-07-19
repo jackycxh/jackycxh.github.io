@@ -4,6 +4,7 @@
 For Emacs CVS version (V23).
 
 Font setting in `.emacs`
+
 ```lisp
 (create-fontset-from-fontset-spec "-*-bitstream vera sans mono-medium-r-*-*-13-*-*-*-*-*-fontset-global, han: WenQuanYi Zen Hei-8")
 (setq window-system-default-frame-alist
@@ -29,6 +30,7 @@ Font setting in `.emacs`
 ```
 
 alias for running daemon and client.
+
 ```bash
 alias et='emacsclient -t "$@" -a ""'
 alias ee='emacsclient -nc "$@" -a ""'

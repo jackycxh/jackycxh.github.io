@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>How to block the incoming phone call from a particular calling number in H323 voice gateway - Jacky Cai</title><meta name="Description" content="All about Jacky Cai"><meta property="og:title" content="How to block the incoming phone call from a particular calling number in H323 voice gateway" />
-<meta property="og:description" content=" create a translation rule that reject the calling number.  1 2  voice translation-rule 99 rule 1 reject /1234567890/   create a translation-profile match the calling number to the created translation-rule.  1 2  voice translation-profile block-incoming-call-from translate calling 99   add call block configuration to dial peer.  1 2  dial-peer voice 10 call block translation-profile incoming block-incoming-call-from   " />
+<meta property="og:description" content=" Create a translation rule that reject the calling number.  1 2  voice translation-rule 99 rule 1 reject /1234567890/   Create a translation-profile match the calling number to the created translation-rule.  1 2  voice translation-profile block-incoming-call-from translate calling 99   Add call block configuration to dial peer.  1 2  dial-peer voice 10 call block translation-profile incoming block-incoming-call-from   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" />
 <meta property="og:image" content="https://jcai.info/logo.png"/>
@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="https://jcai.info/logo.png"/>
 
 <meta name="twitter:title" content="How to block the incoming phone call from a particular calling number in H323 voice gateway"/>
-<meta name="twitter:description" content=" create a translation rule that reject the calling number.  1 2  voice translation-rule 99 rule 1 reject /1234567890/   create a translation-profile match the calling number to the created translation-rule.  1 2  voice translation-profile block-incoming-call-from translate calling 99   add call block configuration to dial peer.  1 2  dial-peer voice 10 call block translation-profile incoming block-incoming-call-from   "/>
+<meta name="twitter:description" content=" Create a translation rule that reject the calling number.  1 2  voice translation-rule 99 rule 1 reject /1234567890/   Create a translation-profile match the calling number to the created translation-rule.  1 2  voice translation-profile block-incoming-call-from translate calling 99   Add call block configuration to dial peer.  1 2  dial-peer voice 10 call block translation-profile incoming block-incoming-call-from   "/>
 <meta name="application-name" content="Jacky Cai">
 <meta name="apple-mobile-web-app-title" content="Jacky Cai"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -128,14 +128,21 @@
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" class="leancloud_visitors" data-flag-title="How to block the incoming phone call from a particular calling number in H323 voice gateway">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="">
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway.jpg"
+        data-srcset="/images/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway.jpg, /images/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway.jpg 1.5x, /images/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway.jpg 2x"
+        data-sizes="auto"
+        alt="/images/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway.jpg"
+        title="/images/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway.jpg" /></div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div><div class="content" id="content"><ol>
-<li>create a translation rule that reject the calling number.</li>
+<li>Create a translation rule that reject the calling number.</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -148,7 +155,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><ol start="2">
-<li>create a translation-profile match the calling number to the created translation-rule.</li>
+<li>Create a translation-profile match the calling number to the created translation-rule.</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -161,7 +168,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><ol start="3">
-<li>add call block configuration to dial peer.</li>
+<li>Add call block configuration to dial peer.</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -186,7 +193,7 @@
                             <a class="link-to-markdown" href="/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" data-title="How to block the incoming phone call from a particular calling number in H323 voice gateway" data-via="jackycxh" data-hashtags="Cisco,IPT,VoIP"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" data-hashtag="Cisco"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" data-title="How to block the incoming phone call from a particular calling number in H323 voice gateway"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" data-title="How to block the incoming phone call from a particular calling number in H323 voice gateway"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" data-title="How to block the incoming phone call from a particular calling number in H323 voice gateway" data-ralateuid="jackycxh"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" data-title="How to block the incoming phone call from a particular calling number in H323 voice gateway" data-via="jackycxh" data-hashtags="Cisco,IPT,VoIP"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" data-hashtag="Cisco"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" data-title="How to block the incoming phone call from a particular calling number in H323 voice gateway"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" data-title="How to block the incoming phone call from a particular calling number in H323 voice gateway"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/" data-title="How to block the incoming phone call from a particular calling number in H323 voice gateway" data-image="/images/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway.jpg" data-ralateuid="jackycxh"><i class="fab fa-weibo fa-fw"></i></a></span>
             </div>
         </div>
     </div>
