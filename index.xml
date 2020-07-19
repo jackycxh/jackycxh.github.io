@@ -4,14 +4,22 @@
         <link>https://jcai.info/</link>
         <description>All about Jacky Cai</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jackycxh@hotmail.com (Jacky Cai)</managingEditor>
-            <webMaster>jackycxh@hotmail.com (Jacky Cai)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 16 Jul 2020 15:59:50 &#43;0800</lastBuildDate>
+            <webMaster>jackycxh@hotmail.com (Jacky Cai)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 18 Jul 2020 19:55:13 &#43;0800</lastBuildDate>
             <atom:link href="https://jcai.info/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Theme Documentation - basics</title>
+    <link>https://jcai.info/theme_documentation_basics/</link>
+    <pubDate>Sat, 18 Jul 2020 19:55:13 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://jcai.info/theme_documentation_basics/</guid>
+    <description><![CDATA[<p></p>
+<p>Discover what the Hugo - <strong>LoveIt</strong> theme is all about and the core-concepts behind it.</p>]]></description>
+</item><item>
     <title>Typora完全使用详解</title>
-    <link>https://jcai.info/first_post/</link>
+    <link>https://jcai.info/examples/</link>
     <pubDate>Thu, 16 Jul 2020 15:59:50 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://jcai.info/first_post/</guid>
+    <guid>https://jcai.info/examples/</guid>
     <description><![CDATA[Typora完全使用详解 Matrix 精选 Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matri]]></description>
 </item></channel>
 </rss>
