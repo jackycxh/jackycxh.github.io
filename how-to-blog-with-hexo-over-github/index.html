@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>如何使用Hexo在Github上搭建静态博客 - Jacky Cai</title><meta name="Description" content="All about Jacky Cai"><meta property="og:title" content="如何使用Hexo在Github上搭建静态博客" />
+<meta property="og:description" content="Hexo 是一个快速，简单的静态博客框架。使用者在本地使用markdown格式编辑博客文章，然后使用Hexo在几秒时间内生成静态HTML文件，并发布" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jcai.info/how-to-blog-with-hexo-over-github/" />
+<meta property="og:image" content="https://jcai.info/logo.png"/>
+<meta property="article:published_time" content="2017-02-17T12:00:19+00:00" />
+<meta property="article:modified_time" content="2017-02-17T12:00:19+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://jcai.info/logo.png"/>
+
+<meta name="twitter:title" content="如何使用Hexo在Github上搭建静态博客"/>
+<meta name="twitter:description" content="Hexo 是一个快速，简单的静态博客框架。使用者在本地使用markdown格式编辑博客文章，然后使用Hexo在几秒时间内生成静态HTML文件，并发布"/>
+<meta name="application-name" content="Jacky Cai">
+<meta name="apple-mobile-web-app-title" content="Jacky Cai"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://jcai.info/how-to-blog-with-hexo-over-github/" /><link rel="prev" href="https://jcai.info/mgre-multipoint-gre-tunnel/" /><link rel="next" href="https://jcai.info/migrate-from-wordpress/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "如何使用Hexo在Github上搭建静态博客",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/jcai.info\/how-to-blog-with-hexo-over-github\/"
+        },"image": ["https:\/\/jcai.info\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Hexo, Github","wordcount":  2473 ,
+        "url": "https:\/\/jcai.info\/how-to-blog-with-hexo-over-github\/","datePublished": "2017-02-17T12:00:19+00:00","dateModified": "2017-02-17T12:00:19+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Jacky Cai","logo": "https:\/\/jcai.info\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Jacky Cai"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Jacky Cai"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" />Jacky Cai<span class="header-title-post"><font size=2> All about Jacky Cai</font></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/jackycxh" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/how-to-blog-with-hexo-over-github/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Jacky Cai"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" />Jacky Cai<span class="header-title-post"><font size=2> All about Jacky Cai</font></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/jackycxh" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/how-to-blog-with-hexo-over-github/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">如何使用Hexo在Github上搭建静态博客</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://jcai.info" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Jacky Cai</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-02-17">2017-02-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2473 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id="/how-to-blog-with-hexo-over-github/" class="leancloud_visitors" data-flag-title="如何使用Hexo在Github上搭建静态博客">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#本地系统环境配置">本地系统环境配置</a>
+      <ul>
+        <li><a href="#安装nodejs">安装Node.js</a></li>
+        <li><a href="#安装git客户端">安装git客户端</a></li>
+        <li><a href="#安装hexo">安装Hexo</a></li>
+      </ul>
+    </li>
+    <li><a href="#本地博客搭建">本地博客搭建</a>
+      <ul>
+        <li><a href="#新建博客文件夹">新建博客文件夹</a></li>
+        <li><a href="#初始化博客">初始化博客</a></li>
+        <li><a href="#生成博客静态html文件">生成博客静态HTML文件</a></li>
+        <li><a href="#本地测试">本地测试</a></li>
+      </ul>
+    </li>
+    <li><a href="#部署到github">部署到Github</a>
+      <ul>
+        <li><a href="#首先要有一个github帐号和pages仓库">首先要有一个github帐号和Pages仓库</a></li>
+        <li><a href="#设定本地git客户端的用户信息">设定本地git客户端的用户信息</a></li>
+        <li><a href="#安装git部署插件">安装git部署插件</a></li>
+        <li><a href="#配置github部署">配置github部署</a>
+          <ul>
+            <li><a href="#ssh-配置">SSH 配置</a>
+              <ul>
+                <li><a href="#生成ssh密钥">生成SSH密钥</a></li>
+                <li><a href="#添加公钥到github帐户中">添加公钥到github帐户中</a></li>
+                <li><a href="#测试ssh连接">测试SSH连接</a></li>
+                <li><a href="#ssh部署设置">SSH部署设置</a></li>
+              </ul>
+            </li>
+            <li><a href="#https配置">HTTPS配置</a></li>
+          </ul>
+        </li>
+        <li><a href="#部署博客到github-pages中">部署博客到Github Pages中</a></li>
+      </ul>
+    </li>
+    <li><a href="#博客文章管理">博客文章管理</a></li>
+    <li><a href="#附录">附录</a>
+      <ul>
+        <li><a href="#ssh密钥文件的权限设置">SSH密钥文件的权限设置</a></li>
+        <li><a href="#git代理服务器设置">Git代理服务器设置</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Hexo 是一个快速，简单的静态博客框架。使用者在本地使用markdown格式编辑博客文章，然后使用Hexo在几秒时间内生成静态HTML文件，并发布到博客网站上。Hexo基于Node.js；功能不如 Wordpress 强大，但对于大部份人来说足够了。</p>
+<p>Github 是一个开源代码管理、分享的网站平台。Github提供了一个Pages功能，有300M免费空间做为静态网站展示。本用于介绍托管在Github上的项目，也可以用来搭建个人静态博客。</p>
+<p>本文详细介绍了如何安装配置Hexo博客框架，并发布到Github Pages上。</p>
+<h2 id="本地系统环境配置">本地系统环境配置</h2>
+<p>本文所有本地设置都是基于ArchLinux操作系统。</p>
+<p>Hexo是基于Node.js的。而Github和Hexo都需要git的支持。本地系统环境主要就是安装Node.js和git客户端；Hexo是在安装node.js后使用npm进行安装的。</p>
+<h3 id="安装nodejs">安装Node.js</h3>
+<p>采用ArchLinux系统带的软件包管理器pacman安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S nodejs npm
+</code></pre></td></tr></table>
+</div>
+</div><p>其它系统可以参考<a href="https://nodejs.org/en/download/package-manager" target="_blank" rel="noopener noreffer">下载、安装Node.js</a></p>
+<h3 id="安装git客户端">安装git客户端</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S git
+</code></pre></td></tr></table>
+</div>
+</div><p>其它系统可到<a href="https://git-scm.com/download" target="_blank" rel="noopener noreffer">Git-Downloads</a>下载安装</p>
+<h3 id="安装hexo">安装Hexo</h3>
+<p>使用npm安装hexo-cli时需要全程root权限，使用sudo还是会有权限不足的提示，必须使用su进入root用户再安装才能成功。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">su
+npm install hexo-cli -g
+<span class="nb">exit</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="本地博客搭建">本地博客搭建</h2>
+<h3 id="新建博客文件夹">新建博客文件夹</h3>
+<p>在本地建立一个文件夹用来存放博客系统。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir blog
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="初始化博客">初始化博客</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> blog
+hexo init
+npm install
+</code></pre></td></tr></table>
+</div>
+</div><p>命令 <em>hexo init</em> 会在当前文件夹建立博客所需的所有文件。</p>
+<h3 id="生成博客静态html文件">生成博客静态HTML文件</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">hexo generate
+</code></pre></td></tr></table>
+</div>
+</div><p>此命令(可缩写为 <em>hexo g</em> ）会在当前文件夹下建立public子文件夹，并在里面生成博客所有的静态HTML文件。</p>
+<h3 id="本地测试">本地测试</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">hexo server
+</code></pre></td></tr></table>
+</div>
+</div><p>可缩写为 <em>hexo s</em> ，启动本地测试web服务器。</p>
+<p>用浏览器打开http://localhost:4000 就可以预览博客，其中包含一篇Hello World。</p>
+<h2 id="部署到github">部署到Github</h2>
+<p>现在博客系统已经在本地成功运行。下一步就是发布到远徎WEB服务器中。发布的本质实际上就是把博客文件夹中public子文件夹里面所有文件传到WEB服务器的目录中。可以手工以自己喜欢的任何方式上传，也可以用Hexo的部署插件(deployer)。因为我们的博客要发布到Github Page中，我们可以使用Hexo的git部署插件(hexo-deployer-git)。</p>
+<h3 id="首先要有一个github帐号和pages仓库">首先要有一个github帐号和Pages仓库</h3>
+<p>进入http://github.com, 点sign up，按提示一步步注册自己的帐号。</p>
+<p>注册好帐号并登录进去后，在github首页右上角<strong>+</strong> -&gt; <strong>New Repository</strong>，项目名称（Project Name）里面填<username>.github.io。<username>为你的github帐号名。其它信息可以不填。点击<strong>Create Repository</strong>完成。</p>
+<h3 id="设定本地git客户端的用户信息">设定本地git客户端的用户信息</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global user.name <span class="s2">&#34;User Name&#34;</span> <span class="c1"># 此用户名为真名，不需要与github里面的相同。</span>
+git config --global user.email <span class="s2">&#34;user@abc.com&#34;</span> <span class="c1"># 此处所填邮箱地址需与github帐号的邮箱相同。</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="安装git部署插件">安装git部署插件</h3>
+<p>使用npm安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm install hexo-deployer-git --save
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="配置github部署">配置github部署</h3>
+<p>github部署支持两种连接方式。一种是SSH，还有一种是HTTPS。</p>
+<h4 id="ssh-配置">SSH 配置</h4>
+<p>采用SSH进行部署的优点是配置好之后每次进行部署时不需要输入用户名、密码。缺点是初始配置比较复杂，而且无法通过代理服务器进行部署。</p>
+<h5 id="生成ssh密钥">生成SSH密钥</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -C <span class="s2">&#34;user@abc.com&#34;</span> <span class="c1"># 此处输入的邮箱地址需与github帐号的邮箱相同</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>系统提示输入保存密钥的文件名，保持默认就行。</p>
+<p>再回车后，系统会再提示输入密码。建议留空，否则后面每次更新部署博客时都需要输入密码。只要<span id="ks"><a href="#keysafe" rel="">保证密钥文件的安全</a></span>就行了。</p>
+<h5 id="添加公钥到github帐户中">添加公钥到github帐户中</h5>
+<p>本地SSH密钥生成后，需要把公钥添加到github帐户设置中。</p>
+<ol>
+<li>复制本地主目录$HOME/.ssh/id_rsa.pub文件中所有的内容</li>
+<li>登录github, 右上角选择<strong>Settings</strong>，-&gt; <strong>SSH and GPG Keys</strong> -&gt; <strong>New SSH key</strong></li>
+<li>Title里面输一个描述，Key里面把is_rsa.pub文件里面的内容粘贴进去</li>
+<li>点<strong>Add SSH key</strong></li>
+</ol>
+<h5 id="测试ssh连接">测试SSH连接</h5>
+<p>输入下面命令测试设置是否成功</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh -T ssh@github.com
+</code></pre></td></tr></table>
+</div>
+</div><p>第一次连接时会提示</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Are you sure you want to continue connecting (yes/no)?
+</code></pre></td></tr></table>
+</div>
+</div><p>输入yes,然后会看到</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre></td></tr></table>
+</div>
+</div><p>说明你已经可以成功通过SSH连接到Github了。下面配置Hexo通过SSH部署博客到Github Pages中。</p>
+<h5 id="ssh部署设置">SSH部署设置</h5>
+<p>编辑博客文件夹中的_config.yml。光标移到最后deployment段落</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># Deployment</span><span class="w">
+</span><span class="w"></span><span class="c">## Docs: https://hexo.io/docs/deployment.html</span><span class="w">
+</span><span class="w"></span><span class="k">deploy</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span>git<span class="w">
+</span><span class="w">  </span><span class="k">repo</span><span class="p">:</span><span class="w"> </span>git@github.com<span class="p">:</span>username/username.github.io.git<span class="w">  </span><span class="c"># 替换username为你的github用户名</span><span class="w">
+</span><span class="w">  </span><span class="k">branch</span><span class="p">:</span><span class="w"> </span>master<span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="https配置">HTTPS配置</h4>
+<p>采用HTTPS进行部署的话每次发布时都需要输入github的用户名和密码。优点是初始配置简单，可以<span id="ps"><a href="#proxy" rel="">通过代理服务器</a></span>进行部署。比如我们公司的网络是只允许HTTP、HTTPS访问Internet，而且还要通过代理服务器。</p>
+<p>初始配置只需要编辑博客文件夹中的_config.yml。光标移到最后deplyment段落</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># Deployment</span><span class="w">
+</span><span class="w"></span><span class="c">## Docs: https://hexo.io/docs/deployment.html</span><span class="w">
+</span><span class="w"></span><span class="k">deploy</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span>git<span class="w">
+</span><span class="w">  </span><span class="k">repo</span><span class="p">:</span><span class="w"> </span>https<span class="p">:</span>//github.com/username/username.github.io.git<span class="w">  </span><span class="c"># 替换username为你的github用户名</span><span class="w">
+</span><span class="w">  </span><span class="k">branch</span><span class="p">:</span><span class="w"> </span>master<span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="部署博客到github-pages中">部署博客到Github Pages中</h3>
+<p>使用hexo git部署插件把博客部署到github pages中。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">hexo deploy <span class="c1"># 可缩写为 hexo d</span>
+<span class="c1"># 如果是采用HTTPS方式，每次部署时会提示要用户名和密码。</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>然后就可以用浏览器打开 <a href="http://username.github.io">http://username.github.io</a> 浏览你的博客了。</p>
+<h2 id="博客文章管理">博客文章管理</h2>
+<p>Hexe里面所有博客文章都是采用Markdown格式编写，源文件都保存在source/_posts文件夹里。文章管理实际上就是管理此文件夹里面的文件。</p>
+<p>新建一篇博客文章可以在此文件夹里新建一个.md文件。或在博客文件夹里面执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">hexo new &lt;title&gt; <span class="c1"># 文章标题</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>删除、修改一篇博文也就是删除、修改对应的.md文件。</p>
+<p>做任何改动后都需要重新生成，部署</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">hexo generate <span class="c1"># 可缩写为 hexo g</span> 
+hexo deploy   <span class="c1"># 可缩写为 hexo d</span>
+<span class="c1"># 以上两行可以一起缩写为 hexo g -d 或 hexo d -g</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="附录">附录</h2>
+<p><span id="keysafe"></span></p>
+<h3 id="ssh密钥文件的权限设置">SSH密钥文件的权限设置</h3>
+<p>设置SSH密钥文件及所在文件夹只有本人可读写，其它任何人无权限。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~
+chmod <span class="m">700</span> .ssh
+<span class="nb">cd</span> .ssh
+chmod <span class="m">600</span> *
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="#ks" rel="">返回</a></p>
+<p><span id="proxy"></span></p>
+<h3 id="git代理服务器设置">Git代理服务器设置</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global http.proxy <span class="s2">&#34;proxyserver:port&#34;</span>   <span class="c1"># 填入代理服务器地址及端口</span> 
+git config --global https.proxy <span class="s2">&#34;proxyserver:port&#34;</span>  <span class="c1"># 填入代理服务器地址及端口</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="#ps" rel="">返回</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2017-02-17</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/how-to-blog-with-hexo-over-github/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://jcai.info/how-to-blog-with-hexo-over-github/" data-title="如何使用Hexo在Github上搭建静态博客" data-via="jackycxh" data-hashtags="Hexo,Github"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://jcai.info/how-to-blog-with-hexo-over-github/" data-hashtag="Hexo"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://jcai.info/how-to-blog-with-hexo-over-github/" data-title="如何使用Hexo在Github上搭建静态博客"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://jcai.info/how-to-blog-with-hexo-over-github/" data-title="如何使用Hexo在Github上搭建静态博客"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://jcai.info/how-to-blog-with-hexo-over-github/" data-title="如何使用Hexo在Github上搭建静态博客" data-ralateuid="jackycxh"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hexo/">Hexo</a>,&nbsp;<a href="/tags/github/">Github</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/mgre-multipoint-gre-tunnel/" class="prev" rel="prev" title="mGRE - multipoint GRE tunnel"><i class="fas fa-angle-left fa-fw"></i>mGRE - multipoint GRE tunnel</a>
+            <a href="/migrate-from-wordpress/" class="next" rel="next" title="从Wordpress迁移到Hexo">从Wordpress迁移到Hexo<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://jcai.info" target="_blank">Jacky Cai</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"Ys62uM7YArR4EX1eIjF3lvcA-MdYXbMMI","appKey":"muQaVABJ0DtgGHuNAz3vcoc3","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":true,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>ArchLinux On Dell D610 -3. Power Management - Jacky Cai</title><meta name="Description" content="All about Jacky Cai"><meta property="og:title" content="ArchLinux On Dell D610 -3. Power Management" />
+<meta property="og:description" content="CPU Frequency CPU频率自动调整。节能，减噪。 1 2 3 4 pacman -S cpufrequtils # 安装调频工具 modprobe acpi_cpufreq # 加载内核模块。 modprobe cpufreq_ondemand # 加载模版 modprobe cpufreq_powersave 执行 cpufreq-info取得CPU" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jcai.info/archlinux-on-dell-d610-3-powermanagement/" />
+<meta property="og:image" content="https://jcai.info/logo.png"/>
+<meta property="article:published_time" content="2009-02-22T14:55:00+00:00" />
+<meta property="article:modified_time" content="2009-02-22T14:55:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://jcai.info/logo.png"/>
+
+<meta name="twitter:title" content="ArchLinux On Dell D610 -3. Power Management"/>
+<meta name="twitter:description" content="CPU Frequency CPU频率自动调整。节能，减噪。 1 2 3 4 pacman -S cpufrequtils # 安装调频工具 modprobe acpi_cpufreq # 加载内核模块。 modprobe cpufreq_ondemand # 加载模版 modprobe cpufreq_powersave 执行 cpufreq-info取得CPU"/>
+<meta name="application-name" content="Jacky Cai">
+<meta name="apple-mobile-web-app-title" content="Jacky Cai"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://jcai.info/archlinux-on-dell-d610-3-powermanagement/" /><link rel="prev" href="https://jcai.info/archlinux-on-dell-d610-2-e7-bd-91-e7-bb-9c-e8-ae-be-e7-bd-ae/" /><link rel="next" href="https://jcai.info/dial-peer-timeout-2/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "ArchLinux On Dell D610 -3. Power Management",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/jcai.info\/archlinux-on-dell-d610-3-powermanagement\/"
+        },"image": ["https:\/\/jcai.info\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Linux","wordcount":  931 ,
+        "url": "https:\/\/jcai.info\/archlinux-on-dell-d610-3-powermanagement\/","datePublished": "2009-02-22T14:55:00+00:00","dateModified": "2009-02-22T14:55:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Jacky Cai","logo": "https:\/\/jcai.info\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Jacky Cai"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Jacky Cai"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" />Jacky Cai<span class="header-title-post"><font size=2> All about Jacky Cai</font></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/jackycxh" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/archlinux-on-dell-d610-3-powermanagement/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Jacky Cai"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" />Jacky Cai<span class="header-title-post"><font size=2> All about Jacky Cai</font></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/jackycxh" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/archlinux-on-dell-d610-3-powermanagement/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">ArchLinux On Dell D610 -3. Power Management</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://jcai.info" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Jacky Cai</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>Linux</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2009-02-22">2009-02-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 931 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/archlinux-on-dell-d610-3-powermanagement/" class="leancloud_visitors" data-flag-title="ArchLinux On Dell D610 -3. Power Management">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#cpu-frequency">CPU Frequency</a></li>
+    <li><a href="#fan-control">Fan Control</a></li>
+    <li><a href="#hibernate--standby">Hibernate &amp; Standby</a></li>
+    <li><a href="#cpu空闲时音箱发出bibi的噪音">CPU空闲时音箱发出bibi的噪音。</a></li>
+    <li><a href="#acpi">ACPI</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="cpu-frequency">CPU Frequency</h2>
+<p>CPU频率自动调整。节能，减噪。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pacman -S cpufrequtils    <span class="c1"># 安装调频工具</span>
+modprobe acpi_cpufreq   <span class="c1"># 加载内核模块。</span>
+modprobe cpufreq_ondemand    <span class="c1"># 加载模版</span>
+modprobe cpufreq_powersave
+</code></pre></td></tr></table>
+</div>
+</div><p>执行 <code>cpufreq-info</code>取得CPU频率的上下限。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">cpufrequtils 005: cpufreq-info <span class="o">(</span>C<span class="o">)</span> Dominik Brodowski 2004-2006
+Report errors and bugs to cpufreq@vger.kernel.org, please.
+analyzing CPU 0:
+driver: acpi-cpufreq
+CPUs which need to switch frequency at the same time: <span class="m">0</span>
+   hardware limits: <span class="m">800</span> MHz - 1.87 GHz&lt;/span&gt;
+available frequency steps: 1.87 GHz, 1.60 GHz, 1.33 GHz, 1.07 GHz, <span class="m">800</span> MHz
+available cpufreq governors: powersave, ondemand, performance
+current policy: frequency should be within <span class="m">800</span> MHz and 1.87 GHz.
+              The governor <span class="s2">&#34;ondemand&#34;</span> may decide which speed to use
+              within this range.
+current CPU frequency is <span class="m">800</span> MHz.<span class="sb">```</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>编辑<code>/etc/conf.d/cpufreq</code>, 选择想要的模版以，设定上下限频率。</p>
+<p>执行程序<code>/etc/rc.d/cpufreq start</code></p>
+<p>编辑<code>/etc/rc.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">MODULES</span><span class="o">=(</span>...acpi_cpufreq cpufreq_ondemand cpufreq_powersave...<span class="o">)</span>
+<span class="nv">DAEMONS</span><span class="o">=(</span>cpufreq ......<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这样以后每次重启电脑后就会自动加载模块，程序</p>
+<h2 id="fan-control">Fan Control</h2>
+<p>根据温度自动调节风扇</p>
+<p>常用的<code>lm_sensors</code>不支持D610的芯片。Google一下找到一个好东西 －<a href="http://dellfand.dinglisch.net/" target="_blank" rel="noopener noreffer">Dellfand</a>。</p>
+<p>到这个网站一去下载<a href="http://dellfand.dinglisch.net/dellfand-0.9.tar.bz2" target="_blank" rel="noopener noreffer">dellfand-0.9.tar.bz2</a> （或到<a href="http://www.adrive.com/public/0c017d983564397a53e3360550b017a315adf738472cce13c67c0b89254d40c6.html" target="_blank" rel="noopener noreffer">我的网盘</a>下载）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">＄tar jxvf dellfand-0.9.tar.bz2
+$ <span class="nb">cd</span> dellfand-0.9
+$ make
+$ cp dellfand /usr/sbin
+$ cp etc.default.dellfand /etc/conf.d/dellfand      <span class="c1"># 可以修改这个文件设定风扇转速在多少温度时调节到什么速度（关，低，高）</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>软件自带的启动脚本<code>etc.init.d.dellfand</code>不适合用在Archlinux上， Archlinux用的是BSD方式的启动脚本。要自己做一个，或拿原来那个来修改。可以到<a href="http://www.adrive.com/public/452cb8ebbd2b2830a96e028c9668c4965a69f646292873d941b1032c92563883.html" target="_blank" rel="noopener noreffer">我的网盘上下载一个改好的</a></p>
+<p>把启动脚本放到<code>/etc/rc.d</code>里面.</p>
+<p>修改<code>/etc/rc.conf</code>,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">DAEMONS</span><span class="o">=(</span>... dellfand ...<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这样dellfand守护进程就会在每次启动时自动加载。</p>
+<h2 id="hibernate--standby">Hibernate &amp; Standby</h2>
+<p>安装<code>pm-utils</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pacman -S pm-utils
+</code></pre></td></tr></table>
+</div>
+</div><p>修改<code>/boot/grub/menu.lst</code></p>
+<p>在<code>kernel</code> 后加上<code>resume=/dev/sda4</code> (交换分区，交换分区大小要大于实际内存）</p>
+<p>挂起到内存：<code>pm-suspend</code></p>
+<p>挂起到硬盘：<code>pm-hibernate</code></p>
+<h2 id="cpu空闲时音箱发出bibi的噪音">CPU空闲时音箱发出bibi的噪音。</h2>
+<p>D610上跑LINUX的通病，解决方法：</p>
+<p>修改<code>/boot/grub/menu.lst</code></p>
+<p>在<code>kernel</code>的选项后加上<code>idle=halt</code>.</p>
+<h2 id="acpi">ACPI</h2>
+<p>安装<code>acpid</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pacman -S acpid
+</code></pre></td></tr></table>
+</div>
+</div><p>修改<code>/etc/rc.conf</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">DAEMONS</span><span class="o">=(</span>...hal...<span class="o">)</span> <span class="c1"># 启动时自动载入hal和acpid.</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>修改<code>/etc/acpi/handler.sh</code>(<a href="http://www.adrive.com/public/29178ed6fd594c0ba91fbe4e230c85cea2aa228fbe60e7cead4e7d37077f2fc9.html" target="_blank" rel="noopener noreffer">修改好了的</a>), 改一些按键的名字和执行的程序。
+按键名字可用<code>acpi\_listen</code>获取。 程序用<code>pm\_utils</code>里面的。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2009-02-22</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/archlinux-on-dell-d610-3-powermanagement/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://jcai.info/archlinux-on-dell-d610-3-powermanagement/" data-title="ArchLinux On Dell D610 -3. Power Management" data-via="jackycxh" data-hashtags="Linux"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://jcai.info/archlinux-on-dell-d610-3-powermanagement/" data-hashtag="Linux"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://jcai.info/archlinux-on-dell-d610-3-powermanagement/" data-title="ArchLinux On Dell D610 -3. Power Management"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://jcai.info/archlinux-on-dell-d610-3-powermanagement/" data-title="ArchLinux On Dell D610 -3. Power Management"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://jcai.info/archlinux-on-dell-d610-3-powermanagement/" data-title="ArchLinux On Dell D610 -3. Power Management" data-ralateuid="jackycxh"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/archlinux-on-dell-d610-2-e7-bd-91-e7-bb-9c-e8-ae-be-e7-bd-ae/" class="prev" rel="prev" title="ArchLinux On Dell D610 - 2. 网络设置"><i class="fas fa-angle-left fa-fw"></i>ArchLinux On Dell D610 - 2. 网络设置</a>
+            <a href="/dial-peer-timeout-2/" class="next" rel="next" title="Dial-peer Timeout">Dial-peer Timeout<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://jcai.info" target="_blank">Jacky Cai</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"Ys62uM7YArR4EX1eIjF3lvcA-MdYXbMMI","appKey":"muQaVABJ0DtgGHuNAz3vcoc3","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":true,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>HowTo: Use a Bluetooth headset with Ubuntu Jaunty - Jacky Cai</title><meta name="Description" content="All about Jacky Cai"><meta property="og:title" content="HowTo: Use a Bluetooth headset with Ubuntu Jaunty" />
+<meta property="og:description" content="HowTo: Use a Bluetooth headset with Ubuntu Jaunty - Overclockers Australia Forums
+At the risk of self-appointing myself tech support for this, I present an updated version of my Bluetooth headset with Ubuntu Hardy guide, this time for Ubuntu Jaunty 9.04.
+This HowTo illustrates how to pair and configure a Bluetooth headset with Ubuntu Jaunty 9.04 and redirect your music and media players to it. This guide is based on the guides at Ubuntu Forums with some modifications to be more step-explicit and thus newbie-friendly and reflects the changes to the Bluetooth stack since my original Hardy instruction." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/" />
+<meta property="og:image" content="https://jcai.info/logo.png"/>
+<meta property="article:published_time" content="2009-07-26T18:21:00+00:00" />
+<meta property="article:modified_time" content="2009-07-26T18:21:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://jcai.info/logo.png"/>
+
+<meta name="twitter:title" content="HowTo: Use a Bluetooth headset with Ubuntu Jaunty"/>
+<meta name="twitter:description" content="HowTo: Use a Bluetooth headset with Ubuntu Jaunty - Overclockers Australia Forums
+At the risk of self-appointing myself tech support for this, I present an updated version of my Bluetooth headset with Ubuntu Hardy guide, this time for Ubuntu Jaunty 9.04.
+This HowTo illustrates how to pair and configure a Bluetooth headset with Ubuntu Jaunty 9.04 and redirect your music and media players to it. This guide is based on the guides at Ubuntu Forums with some modifications to be more step-explicit and thus newbie-friendly and reflects the changes to the Bluetooth stack since my original Hardy instruction."/>
+<meta name="application-name" content="Jacky Cai">
+<meta name="apple-mobile-web-app-title" content="Jacky Cai"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/" /><link rel="prev" href="https://jcai.info/emacs-daemon-and-font/" /><link rel="next" href="https://jcai.info/translation-profile_in_srst_mode/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "HowTo: Use a Bluetooth headset with Ubuntu Jaunty",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/jcai.info\/howto-use-a-bluetooth-headset-with-ubuntu-jaunty\/"
+        },"image": ["https:\/\/jcai.info\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Linux","wordcount":  1786 ,
+        "url": "https:\/\/jcai.info\/howto-use-a-bluetooth-headset-with-ubuntu-jaunty\/","datePublished": "2009-07-26T18:21:00+00:00","dateModified": "2009-07-26T18:21:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Jacky Cai","logo": "https:\/\/jcai.info\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Jacky Cai"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Jacky Cai"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" />Jacky Cai<span class="header-title-post"><font size=2> All about Jacky Cai</font></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/jackycxh" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Jacky Cai"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" />Jacky Cai<span class="header-title-post"><font size=2> All about Jacky Cai</font></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/jackycxh" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">HowTo: Use a Bluetooth headset with Ubuntu Jaunty</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://jcai.info" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Jacky Cai</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>Linux</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2009-07-26">2009-07-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1786 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 9 分钟&nbsp;<span id="/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/" class="leancloud_visitors" data-flag-title="HowTo: Use a Bluetooth headset with Ubuntu Jaunty">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#purpose">Purpose:</a></li>
+    <li><a href="#scenario">Scenario:</a></li>
+    <li><a href="#solution">Solution:</a></li>
+    <li><a href="#prerequisites">Prerequisites:</a></li>
+    <li><a href="#pros">Pros:</a></li>
+    <li><a href="#cons">Cons:</a></li>
+    <li><a href="#steps">Steps:</a></li>
+    <li><a href="#known-issues">KNOWN ISSUES:</a></li>
+    <li><a href="#contributions">CONTRIBUTIONS:</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><a href="http://forums.overclockers.com.au/showthread.php?t=780054" target="_blank" rel="noopener noreffer">HowTo: Use a Bluetooth headset with Ubuntu Jaunty - Overclockers Australia Forums</a></p>
+<p>At the risk of self-appointing myself tech support for this, I present an updated version of my Bluetooth headset with Ubuntu Hardy guide, this time for Ubuntu Jaunty 9.04.</p>
+<p>This HowTo illustrates how to pair and configure a Bluetooth headset with Ubuntu Jaunty 9.04 and redirect your music and media players to it. This guide is based on the guides at Ubuntu Forums with some modifications to be more step-explicit and thus newbie-friendly and reflects the changes to the Bluetooth stack since my original Hardy instruction.</p>
+<h2 id="purpose">Purpose:</h2>
+<p>To play your audio such as MP3&rsquo;s and movie output through a Bluetooth-connected audio headset using Ubuntu Jaunty 9.04.</p>
+<h2 id="scenario">Scenario:</h2>
+<p>You are too lazy to plug in a cable to your PC. You want to walk around your house without a long cable after you. You want to look cool to your mates. You want to psyche out your non-tech parents by listening to music without any audio device or cables attached to you. Problem is, very few Linux apps have direct support for directing sound to any other device.</p>
+<h2 id="solution">Solution:</h2>
+<p>Redirect all audio using the PulseAudio Server on Ubuntu Jaunty.</p>
+<h2 id="prerequisites">Prerequisites:</h2>
+<ul>
+<li>Bluetooth 1.2 compliant (or better) adapter to your PC. This can be in-built, such as on a modern notebook PC, or a USB dongle such as the one I use. You will NOT have success with Bluetooth adapters that are only compliant with the 1.0 or 1.1 specification.</li>
+<li>Ubuntu Jaunty 9.04 (I&rsquo;m using the 64-bit version in this example).</li>
+<li>Internet access or other such access to the Ubuntu repositories to install extra software from.</li>
+<li>Suitable Bluetooth headset. The unit I bought is a TDK BT100 pair of buds. Supports Bluetooth 1.2 and 2.0, does headset, handsfree A2DP and AVRCP functions (typical function set of any headset/handsfree unit these days). Though the sound quality of these things isn&rsquo;t that great, it was only $49 at my local PC shop.</li>
+</ul>
+<h2 id="pros">Pros:</h2>
+<ul>
+<li>You are cable free! You can walk around the house (as far as the range of your Bluetooth adapter goes) and listen to music/movies.</li>
+<li>If your headset also has a mic, you can use that too for VOIP apps and the like, though this is not a working feature (at least for me) in Jaunty.</li>
+</ul>
+<h2 id="cons">Cons:</h2>
+<ul>
+<li>A Bluetooth headset is generally more expensive than a cabled one.</li>
+<li>Most headset batteries only last four hours in continuous use before needing a recharge (though the TDK unit I have plugs into mini-USB to recharge and can still be used whilst recharging, which is convenient).</li>
+<li>Audio quality is generally not as good as a dedicated cabled headset.</li>
+<li>For those headsets that have battery-saving functions when idle, some are known to clip the start of the audio playback when turning back on (my set causes Ubuntu to wait until it&rsquo;s up and running before streaming the audio, thus no clipping).</li>
+<li>Due to large changes in how Bluetooth works in Ubuntu between Hardy and Jaunty, you may find your Bluetooth headset might not be visible at all by the system or is seen, but refuses to pair.</li>
+</ul>
+<h2 id="steps">Steps:</h2>
+<p>These instructions should be adaptable to other distributions.</p>
+<ol>
+<li>
+<p>Fire up/install Ubuntu as normal.</p>
+</li>
+<li>
+<p>Plug in or enable your Bluetooth adapter. Your Bluetooth adapter will be automatically detected and drivers loaded - there is nothing for you to do manually here.</p>
+</li>
+<li>
+<p>Turn on your Bluetooth headset.</p>
+</li>
+<li>
+<p>Switch your headset into pairing mode (refer to your headset&rsquo;s manual).</p>
+</li>
+<li>
+<p>While the headset is in pairing mode, left click the Bluetooth icon in your system tray and choose &ldquo;Setup new device&rdquo; from the menu. Follow the wizard prompts to seek out and pair your headset.</p>
+</li>
+<li>
+<p>Once paired, open a terminal, and type in the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ hcitool scan
+</code></pre></td></tr></table>
+</div>
+</div><p>Your PC will now scan for local Bluetooth devices and your headset should appear in the resulting list after a few seconds (along with anyone&rsquo;s Bluetooth-enabled mobile phones that are in range). The output will look something like:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ hcitool scan 
+  Scanning ... 
+  00:11:22:AA:BB:CC Nokia N95 
+  00:33:44:DD:EE:FF BT81
+$
+</code></pre></td></tr></table>
+</div>
+</div><p>In this example, my PC has found my Nokia mobile phone and my Bluetooth headset and shown me the MAC addresses for both of them.</p>
+</li>
+<li>
+<p>Highlight and copy the MAC address of the headset to the clipboard using your mouse and CTRL + SHIFT + C. In this example my headset&rsquo;s MAC address is &ldquo;00 : 33 : 44 : DD : EE : FF&rdquo;. Yours will be different - copy YOUR address, not this example&rsquo;s address.</p>
+</li>
+<li>
+<p>Now type in:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo gedit ~/.asoundrc
+</code></pre></td></tr></table>
+</div>
+</div><p>Note the period before &ldquo;asoundrc&rdquo;. This will create a new hidden text file called .asoundrc in the root of your Home directory and open GEdit so you can add to it. The file is hidden because of the leading period.</p>
+</li>
+<li>
+<p>In the text editor, type in the following, replacing the MAC address in the example with the one you copied earlier from YOUR output (paste with CTRL + V):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pcm.btheadset <span class="o">{</span> 
+    <span class="nb">type</span> bluetooth
+    device 00:33:44:DD:EE:FF
+    profile <span class="s2">&#34;auto&#34;</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Save and exit.</p>
+</li>
+<li>
+<p>Now type in:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo hciconfig hci0 voice 0x0060
+</code></pre></td></tr></table>
+</div>
+</div><p>This will enable your Bluetooth adapter to carry Bluetooth audio.</p>
+</li>
+<li>
+<p>Now we need to tell PulseAudio that your Bluetooth headset exists:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ pactl load-module module-alsa-sink <span class="nv">device</span><span class="o">=</span>btheadset
+$ pactl load-module module-alsa-source <span class="nv">device</span><span class="o">=</span>btheadset
+</code></pre></td></tr></table>
+</div>
+</div><p>Note that this enables your Bluetooth headset for PulseAudio only temporarily. When you reboot, the PulseAudio configuration for Bluetooth will be lost. For future convenience, create a bash script with the above commands in it and create a launcher on your desktop to run the commands when you double-click on the launcher icon. Due to needing to have the headset paired BEFORE you run these commands, you cannot have these commands run automatically during system startup. It will cause PulseAudio to fail.</p>
+</li>
+<li>
+<p>Once pairing has completed, we can now test to see if we can send audio to the headset. In your terminal, type in the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ aplay -D btheadset -f s16_le /usr/share/sounds/ubuntu/stereo/dialog-question.wav
+</code></pre></td></tr></table>
+</div>
+</div><p>This will attempt direct communication with your headset, and within a second or so, you should suddenly hear the familiar Ubuntu &ldquo;login ready&rdquo; drum sound play through your headset! If you didn&rsquo;t head it first time, try the command a second time as there may be a delay between &ldquo;activating&rdquo; your headset and playing sound.</p>
+<p>Unfortunately only aplay will play anything through your headset. All other sounds are still coming through your speakers. Unless the application in question can redirect audio to another detected device, it will always play through the standard-out, so applications such as Totem and Rhythmbox will still output via your speakers and not give a hoot about your Bluetooth headset. To fix this, we need to make use of the PulseAudio Server which can redirect output to another device.</p>
+</li>
+<li>
+<p>The PulseAudio Server is already installed by default in Ubuntu Jaunty, so we just need to install some tools to manipulate it. Go back to your terminal and type in the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install paprefs paman padevchooser
+</code></pre></td></tr></table>
+</div>
+</div><p>This will install the PulseAudio Preferences app, the PulseAudio Manager app and the PulseAudio Device Chooser app.</p>
+</li>
+<li>
+<p>Once installed, go to Applications-&gt;Sound &amp; Video-&gt;PulseAudio Device Chooser. This will add a black microphone jack icon to your system tray.</p>
+</li>
+<li>
+<p>Do a left-click on the jack icon and a menu appears. In this menu, choose &ldquo;Manager&rdquo;. A new window appears.</p>
+</li>
+<li>
+<p>If it&rsquo;s not already connected, click on the &ldquo;Connect&rdquo; button to connect to your local PulseAudio server. When connected, you will see details about it listed.</p>
+</li>
+<li>
+<p>Click on the Devices tab. Under &ldquo;Sinks&rdquo; you should see an entry for &ldquo;alsa_output.btheadset&rdquo;. This is picked up directly from your .asoundrc file.</p>
+</li>
+<li>
+<p>Now go to the Sample Cache tab. You are shown a list of sounds. Choose a WAV file from this list (it won&rsquo;t play any other format). At the bottom is a &ldquo;Playback on&rdquo; drop-down. Choose &ldquo;alsa_output.btheadset&rdquo; from this list and click on the Play button. You should hear the Ubuntu &ldquo;login ready&rdquo; sound through your speakers. This proves to us that PulseAudio can play through your Bluetooth headset (but this is NOT the redirection - this is just a test).</p>
+</li>
+<li>
+<p>Close the PulseAudio Manager.</p>
+</li>
+<li>
+<p>Do another left-click on the mic jack icon in your system tray.</p>
+</li>
+<li>
+<p>Go to &ldquo;Default Sink&rdquo; and then choose &ldquo;Other&rdquo; from the sub-menu. A window appears.</p>
+</li>
+<li>
+<p>In this window, type in &ldquo;alsa_output.btheadset&rdquo; and click OK.</p>
+</li>
+<li>
+<p>Play a sound from somewhere, eg: MP3 or movie in Totem. You should now hear your audio coming through your Bluetooth headset! NOTE: Existing audio streams at the time of changing the sink will continue to play through whatever they were playing through until stopped and started again.</p>
+</li>
+<li>
+<p>To switch back to your speakers, simply click on the mic jack icon again, choose &ldquo;Default Sink&rdquo; and choose &ldquo;Default&rdquo; from the sub-menu. The next audio stream played will go back through your speakers.</p>
+</li>
+<li>
+<p>To make the PulseAudio Device Chooser start automatically on startup, click on the mic jack icon again, choose Preferences from the menu and then click on &ldquo;Start applet on Session Login&rdquo; in the window.</p>
+</li>
+<li>
+<p>Enjoy!</p>
+</li>
+</ol>
+<h2 id="known-issues">KNOWN ISSUES:</h2>
+<ul>
+<li>This does not work with Skype. Despite the &ldquo;btheadset&rdquo; device being listed as a Sound Device option within Skype, you will get errors when it tries to playback or record audio via the headset and it will in fact kill the PulseAudio server forcing you to restart PulseAudio or your PC to get it running again. I have not figured this one out yet.</li>
+<li>You cannot have your headset auto-pair and be auto-configured with PulseAudio upon startup (yet?). You will need to pair first, then run the two &ldquo;pactl&rdquo; commands in step 10 manually or via a script launcher. Before you say &ldquo;can&rsquo;t I put those commands in startup?&rdquo;, you cannot have these commands auto-run on startup or PulseAudio will hang or crash (because the pairing with your headset has not been established yet).</li>
+<li>The Sound Recorder is unable to lock onto the headset for recording audio (in fact, it goes nuts when trying to record).</li>
+<li>The second &ldquo;pactl&rdquo; command in Step 12 may cause unusual undesired system behaviour. Since the second command only exists to setup the microphone on your headset, if you do not have one or don&rsquo;t intend to use the microphone, you may omit this line.</li>
+</ul>
+<h2 id="contributions">CONTRIBUTIONS:</h2>
+<ul>
+<li>mbarclay has contributed a nifty script that can be used to prepare PulseAudio to talk to your headset (note that you still need to pair beforehand, and then redirect all audio with PulseAudio Dev Chooser after the script is run). You can use this script with a simple launcher icon from the desktop or a panel.</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2009-07-26</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/" data-title="HowTo: Use a Bluetooth headset with Ubuntu Jaunty" data-via="jackycxh" data-hashtags="Linux"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/" data-hashtag="Linux"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/" data-title="HowTo: Use a Bluetooth headset with Ubuntu Jaunty"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/" data-title="HowTo: Use a Bluetooth headset with Ubuntu Jaunty"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/" data-title="HowTo: Use a Bluetooth headset with Ubuntu Jaunty" data-ralateuid="jackycxh"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/emacs-daemon-and-font/" class="prev" rel="prev" title="Emacs Daemon and Font"><i class="fas fa-angle-left fa-fw"></i>Emacs Daemon and Font</a>
+            <a href="/translation-profile_in_srst_mode/" class="next" rel="next" title="Translation-profile in Cisco Voice Gateway SRST mode.">Translation-profile in Cisco Voice Gateway SRST mode.<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://jcai.info" target="_blank">Jacky Cai</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"Ys62uM7YArR4EX1eIjF3lvcA-MdYXbMMI","appKey":"muQaVABJ0DtgGHuNAz3vcoc3","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":true,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -3,23 +3,85 @@
         <title>Jacky Cai</title>
         <link>https://jcai.info/</link>
         <description>All about Jacky Cai</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jackycxh@hotmail.com (Jacky Cai)</managingEditor>
-            <webMaster>jackycxh@hotmail.com (Jacky Cai)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 18 Jul 2020 19:55:13 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jackycxh@outlook.com (Jacky Cai)</managingEditor>
+            <webMaster>jackycxh@outlook.com (Jacky Cai)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 07 Mar 2017 20:36:42 &#43;0000</lastBuildDate>
             <atom:link href="https://jcai.info/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>Theme Documentation - basics</title>
-    <link>https://jcai.info/theme_documentation_basics/</link>
-    <pubDate>Sat, 18 Jul 2020 19:55:13 &#43;0800</pubDate>
+    <title>从Wordpress迁移到Hexo</title>
+    <link>https://jcai.info/migrate-from-wordpress/</link>
+    <pubDate>Tue, 07 Mar 2017 20:36:42 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>https://jcai.info/theme_documentation_basics/</guid>
-    <description><![CDATA[<p></p>
-<p>Discover what the Hugo - <strong>LoveIt</strong> theme is all about and the core-concepts behind it.</p>]]></description>
+    <guid>https://jcai.info/migrate-from-wordpress/</guid>
+    <description><![CDATA[上一篇文章里我介绍了怎样用Hexo在Github上搭建静态博客。 有很多人之前可能都在其它地方用Wordpress写过博客，而且里面可能已经有]]></description>
 </item><item>
-    <title>Typora完全使用详解</title>
-    <link>https://jcai.info/examples/</link>
-    <pubDate>Thu, 16 Jul 2020 15:59:50 &#43;0800</pubDate>
+    <title>如何使用Hexo在Github上搭建静态博客</title>
+    <link>https://jcai.info/how-to-blog-with-hexo-over-github/</link>
+    <pubDate>Fri, 17 Feb 2017 12:00:19 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>https://jcai.info/examples/</guid>
-    <description><![CDATA[Typora完全使用详解 Matrix 精选 Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matri]]></description>
+    <guid>https://jcai.info/how-to-blog-with-hexo-over-github/</guid>
+    <description><![CDATA[Hexo 是一个快速，简单的静态博客框架。使用者在本地使用markdown格式编辑博客文章，然后使用Hexo在几秒时间内生成静态HTML文件，并发布]]></description>
+</item><item>
+    <title>mGRE - multipoint GRE tunnel</title>
+    <link>https://jcai.info/mgre-multipoint-gre-tunnel/</link>
+    <pubDate>Thu, 12 Jun 2014 13:55:56 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://jcai.info/mgre-multipoint-gre-tunnel/</guid>
+    <description><![CDATA[Features  tunnels between each two sites, traffics between spoke sites don&rsquo;t need to pass the hub site.  permanent tunnel between Hub site and each Spoke site dynamic tunnel between Spoke sites on demand   simplify the configuration In Spoke site, static IP address is not required. static IP address is required only in Hub site.  How is it working  Hub site works as a NHRP server and ready to accept the register from the spoke sites Spoke sites register their IP to the Hub site(NHRP server).]]></description>
+</item><item>
+    <title>Cisco IOS configuration file auto backup and rollback</title>
+    <link>https://jcai.info/cisco-ios-configuration-file-auto-backup-and-rollback/</link>
+    <pubDate>Fri, 03 May 2013 10:17:24 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://jcai.info/cisco-ios-configuration-file-auto-backup-and-rollback/</guid>
+    <description><![CDATA[Since IOS ver 12.3(4), Cisco introduced the Archive mode into the IOS which could be used for backup the configuration file automatically and roll back the configuration to an earlier version. Below are some IOS commands for this.
+1 2 3 4 5  Router&gt; enable !Enter privilige mode Router# configure terminal !Enter configuration mode Router(config)# archive !Enter archive mode Router(config-archive)# write-memory !Enable automatic backup during write memory Router(config-archive)# path URL !]]></description>
+</item><item>
+    <title>How to block the incoming phone call from a particular calling number in H323 voice gateway</title>
+    <link>https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/</link>
+    <pubDate>Sat, 10 Sep 2011 01:47:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/</guid>
+    <description><![CDATA[ create a translation rule that reject the calling number.  1 2  voice translation-rule 99 rule 1 reject /1234567890/   create a translation-profile match the calling number to the created translation-rule.  1 2  voice translation-profile block-incoming-call-from translate calling 99   add call block configuration to dial peer.  1 2  dial-peer voice 10 call block translation-profile incoming block-incoming-call-from   ]]></description>
+</item><item>
+    <title>Caller ID receive and call disconnect problem for FXO ports</title>
+    <link>https://jcai.info/caller-id-recieve-and-call-disconnect-problem-for-fxo-ports-2/</link>
+    <pubDate>Thu, 31 Mar 2011 07:09:26 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://jcai.info/caller-id-recieve-and-call-disconnect-problem-for-fxo-ports-2/</guid>
+    <description><![CDATA[关于FXO上的挂断 大家应该都已经了解FXO上的挂断需要检测外线上的挂断音，在思科的FXO上，一般我们通过配置下面的命令： 1 2 3 4 voice-port x/x/x supervisory disconnect dualtone mid-call]]></description>
+</item><item>
+    <title>Cut Through Two-Way Audio Early with the voice rtp send-recv Command on the Cisco IOS Gateway and Routers</title>
+    <link>https://jcai.info/cut-through-two-way-audio-early-with-the-voice-rtp-send-recv-command-on-the-cisco-ios-gateway-and-routers-2/</link>
+    <pubDate>Wed, 30 Mar 2011 03:37:25 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://jcai.info/cut-through-two-way-audio-early-with-the-voice-rtp-send-recv-command-on-the-cisco-ios-gateway-and-routers-2/</guid>
+    <description><![CDATA[The voice path is established in the backward direction at the start of the RTP stream. The forward audio path is not cut through until the Cisco IOS gateway receives a Connect message from the remote end.
+In some cases, it is necessary to establish a two-way audio path as soon as the RTP channel is opened, which is before the Connect message is received. In order to achieve this, issue the voice rtp send-recv global configuration command.]]></description>
+</item><item>
+    <title>Upgrading Cisco Catalyst switch to new feature set</title>
+    <link>https://jcai.info/upgrading-catalyst-to-new-feature-set/</link>
+    <pubDate>Mon, 13 Dec 2010 03:19:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://jcai.info/upgrading-catalyst-to-new-feature-set/</guid>
+    <description><![CDATA[Error: The image in the archive which would be used to upgrade Error: system number 1 does not support the same feature set.
+ I just got this error message while upgrading a Cisco Catalyst 3560 from 12.2(35)SE5 to 12.2(44)SE. The older version was IP BASE and the new version is ADVANCED IP SERVICES.
+It seems that Cisco has added a check into there upgrade process to prevent you from accidentally changing the feature set during an IOS upgrade.]]></description>
+</item><item>
+    <title>Translation-profile in Cisco Voice Gateway SRST mode.</title>
+    <link>https://jcai.info/translation-profile_in_srst_mode/</link>
+    <pubDate>Mon, 17 Aug 2009 16:02:11 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://jcai.info/translation-profile_in_srst_mode/</guid>
+    <description><![CDATA[In some cases, you may want to populate the calling/called number when remote site fallback to SRST mode. You can add translation-profile in call-manager-fallback as below:
+1 2 3 4  call-manager-fallback translation-profile incoming aaa !!! or translation-profile outgoing bbb   The translation-profile under the call-manager-fallback affect the incoming and outgoing calls to the router from the IP phone. This is a different behavior than when you apply the translation-profile under a dial-peer.]]></description>
+</item><item>
+    <title>HowTo: Use a Bluetooth headset with Ubuntu Jaunty</title>
+    <link>https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/</link>
+    <pubDate>Sun, 26 Jul 2009 18:21:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/</guid>
+    <description><![CDATA[HowTo: Use a Bluetooth headset with Ubuntu Jaunty - Overclockers Australia Forums
+At the risk of self-appointing myself tech support for this, I present an updated version of my Bluetooth headset with Ubuntu Hardy guide, this time for Ubuntu Jaunty 9.04.
+This HowTo illustrates how to pair and configure a Bluetooth headset with Ubuntu Jaunty 9.04 and redirect your music and media players to it. This guide is based on the guides at Ubuntu Forums with some modifications to be more step-explicit and thus newbie-friendly and reflects the changes to the Bluetooth stack since my original Hardy instruction.]]></description>
 </item></channel>
 </rss>

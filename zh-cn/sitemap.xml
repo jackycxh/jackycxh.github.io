@@ -2,7 +2,9 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://jcai.info/categories/</loc><lastmod>2020-07-18T19:55:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://jcai.info/tags/blog/</loc><lastmod>2017-03-07T20:36:42&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/blog/</loc><lastmod>2017-03-07T20:36:42&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/</loc><lastmod>2017-03-07T20:36:42&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://jcai.info/en/categories/"
@@ -11,8 +13,9 @@
                     hreflang="zh-cn"
                     href="https://jcai.info/categories/"
                     /></url><url>
-            <loc>https://jcai.info/categories/documentation/</loc><lastmod>2020-07-18T19:55:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://jcai.info/</loc><lastmod>2020-07-18T19:55:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://jcai.info/tags/hexo/</loc><lastmod>2017-03-07T20:36:42&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/hexo/</loc><lastmod>2017-03-07T20:36:42&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/</loc><lastmod>2017-03-07T20:36:42&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://jcai.info/en/"
@@ -21,9 +24,8 @@
                     hreflang="zh-cn"
                     href="https://jcai.info/"
                     /></url><url>
-            <loc>https://jcai.info/posts/</loc><lastmod>2020-07-18T19:55:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://jcai.info/theme_documentation_basics/</loc><lastmod>2020-07-18T19:55:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://jcai.info/tags/</loc><lastmod>2020-07-16T15:59:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://jcai.info/posts/</loc><lastmod>2017-03-07T20:36:42&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/tags/</loc><lastmod>2017-03-07T20:36:42&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://jcai.info/en/tags/"
@@ -32,5 +34,44 @@
                     hreflang="zh-cn"
                     href="https://jcai.info/tags/"
                     /></url><url>
-            <loc>https://jcai.info/tags/typora/</loc><lastmod>2020-07-16T15:59:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://jcai.info/examples/</loc><lastmod>2020-07-16T15:59:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>
+            <loc>https://jcai.info/tags/wordpress/</loc><lastmod>2017-03-07T20:36:42&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/wordpress/</loc><lastmod>2017-03-07T20:36:42&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/migrate-from-wordpress/</loc><lastmod>2017-03-07T20:36:42&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/tags/github/</loc><lastmod>2017-02-17T12:00:19&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/how-to-blog-with-hexo-over-github/</loc><lastmod>2017-02-17T12:00:19&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/tags/cisco/</loc><lastmod>2014-06-12T13:55:56&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/cisco/</loc><lastmod>2014-06-12T13:55:56&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/mgre-multipoint-gre-tunnel/</loc><lastmod>2014-06-12T13:55:56&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/tags/network/</loc><lastmod>2014-06-12T13:55:56&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/network/</loc><lastmod>2014-06-12T13:55:56&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/cisco-ios-configuration-file-auto-backup-and-rollback/</loc><lastmod>2013-05-03T10:17:24&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/how-to-block-the-incoming-phone-call-from-a-particular-calling-number-in-h323-voice-gateway/</loc><lastmod>2011-09-10T01:47:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/tags/ipt/</loc><lastmod>2011-09-10T01:47:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/ipt/</loc><lastmod>2011-09-10T01:47:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/tags/voip/</loc><lastmod>2011-09-10T01:47:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/voip/</loc><lastmod>2011-09-10T01:47:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/caller-id-recieve-and-call-disconnect-problem-for-fxo-ports-2/</loc><lastmod>2011-03-31T07:09:26&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/cut-through-two-way-audio-early-with-the-voice-rtp-send-recv-command-on-the-cisco-ios-gateway-and-routers-2/</loc><lastmod>2011-03-30T03:37:25&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/upgrading-catalyst-to-new-feature-set/</loc><lastmod>2010-12-13T03:19:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/translation-profile_in_srst_mode/</loc><lastmod>2009-08-17T16:02:11&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/</loc><lastmod>2009-07-26T18:21:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/tags/linux/</loc><lastmod>2009-07-26T18:21:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/linux/</loc><lastmod>2009-07-26T18:21:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/tags/emacs/</loc><lastmod>2009-07-22T23:09:09&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/emacs/</loc><lastmod>2009-07-22T23:09:09&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/emacs-daemon-and-font/</loc><lastmod>2009-07-22T23:09:09&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/batch_change_extension_number_of_ip_phones/</loc><lastmod>2009-07-14T15:20:34&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/srstre-convergence_time/</loc><lastmod>2009-06-22T14:35:17&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/debug-command-for-fxofxs-pstn-line-2/</loc><lastmod>2009-06-19T16:02:23&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/dial-peer-timeout-2/</loc><lastmod>2009-06-19T14:35:45&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/archlinux-on-dell-d610-3-powermanagement/</loc><lastmod>2009-02-22T14:55:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/archlinux-on-dell-d610-2-e7-bd-91-e7-bb-9c-e8-ae-be-e7-bd-ae/</loc><lastmod>2009-02-22T07:43:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/archlinux-on-dell-d610-1-e5-ae-89-e8-a3-85/</loc><lastmod>2009-02-20T09:35:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/some-tips-about-dsp-chip-usage/</loc><lastmod>2009-02-13T02:12:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/tags/chm/</loc><lastmod>2009-02-09T02:43:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/chm/</loc><lastmod>2009-02-09T02:43:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/open-chm-files-in-xp-sp3vista/</loc><lastmod>2009-02-09T02:43:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/tags/windows/</loc><lastmod>2009-02-09T02:43:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/categories/windows/</loc><lastmod>2009-02-09T02:43:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/h323-gateway-call-drop-when-call-manager-failover/</loc><lastmod>2009-01-23T13:46:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://jcai.info/srst-hunt-groups/</loc><lastmod>2008-05-15T03:19:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
