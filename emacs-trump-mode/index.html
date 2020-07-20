@@ -5,32 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>从Wordpress迁移到Hexo - Jacky Cai</title><meta name="Description" content="All about Jacky Cai"><meta property="og:title" content="从Wordpress迁移到Hexo" />
-<meta property="og:description" content="上一篇文章里我介绍了怎样用Hexo在Github上搭建静态博客。 有很多人之前可能都在其它地方用Wordpress写过博客，而且里面可能已经有" />
+        <title>Emacs Tramp Mode - Jacky Cai</title><meta name="Description" content="All about Jacky Cai"><meta property="og:title" content="Emacs Tramp Mode" />
+<meta property="og:description" content="Emacs Tramp Mode 日常用Emacs的同学可能很多都是开机打开Emacs就不关的，或者干脆就是用Emacs的Daemon模式，每次要用就开一个emacsc" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jcai.info/migrate-from-wordpress/" />
+<meta property="og:url" content="https://jcai.info/emacs-trump-mode/" />
 <meta property="og:image" content="https://jcai.info/logo.png"/>
-<meta property="article:published_time" content="2017-03-07T20:36:42+00:00" />
-<meta property="article:modified_time" content="2017-03-07T20:36:42+00:00" />
+<meta property="article:published_time" content="2020-07-20T15:12:05+08:00" />
+<meta property="article:modified_time" content="2020-07-20T15:12:05+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://jcai.info/logo.png"/>
 
-<meta name="twitter:title" content="从Wordpress迁移到Hexo"/>
-<meta name="twitter:description" content="上一篇文章里我介绍了怎样用Hexo在Github上搭建静态博客。 有很多人之前可能都在其它地方用Wordpress写过博客，而且里面可能已经有"/>
+<meta name="twitter:title" content="Emacs Tramp Mode"/>
+<meta name="twitter:description" content="Emacs Tramp Mode 日常用Emacs的同学可能很多都是开机打开Emacs就不关的，或者干脆就是用Emacs的Daemon模式，每次要用就开一个emacsc"/>
 <meta name="application-name" content="Jacky Cai">
 <meta name="apple-mobile-web-app-title" content="Jacky Cai"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://jcai.info/migrate-from-wordpress/" /><link rel="prev" href="https://jcai.info/how-to-blog-with-hexo-over-github/" /><link rel="next" href="https://jcai.info/emacs-trump-mode/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://jcai.info/emacs-trump-mode/" /><link rel="prev" href="https://jcai.info/migrate-from-wordpress/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "从Wordpress迁移到Hexo",
+        "headline": "Emacs Tramp Mode",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/jcai.info\/migrate-from-wordpress\/"
-        },"image": ["https:\/\/jcai.info\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Hexo, Blog, Wordpress","wordcount":  496 ,
-        "url": "https:\/\/jcai.info\/migrate-from-wordpress\/","datePublished": "2017-03-07T20:36:42+00:00","dateModified": "2017-03-07T20:36:42+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/jcai.info\/emacs-trump-mode\/"
+        },"image": ["https:\/\/jcai.info\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Emacs","wordcount":  959 ,
+        "url": "https:\/\/jcai.info\/emacs-trump-mode\/","datePublished": "2020-07-20T15:12:05+08:00","dateModified": "2020-07-20T15:12:05+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Jacky Cai","logo": "https:\/\/jcai.info\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -54,7 +54,7 @@
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/jackycxh" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
-                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/migrate-from-wordpress/" selected>简体中文</option></select>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/emacs-trump-mode/" selected>简体中文</option></select>
                     </a><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
@@ -108,7 +108,7 @@
                 </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/jackycxh" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/migrate-from-wordpress/" selected>简体中文</option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/emacs-trump-mode/" selected>简体中文</option></select>
                 </a></div>
     </div>
 </header>
@@ -122,132 +122,224 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">从Wordpress迁移到Hexo</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://jcai.info" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Jacky Cai</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/hexo/"><i class="far fa-folder fa-fw"></i>Hexo</a>&nbsp;<a href="/categories/blog/"><i class="far fa-folder fa-fw"></i>Blog</a>&nbsp;<a href="/categories/wordpress/"><i class="far fa-folder fa-fw"></i>Wordpress</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-07">2017-03-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 496 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/migrate-from-wordpress/" class="leancloud_visitors" data-flag-title="从Wordpress迁移到Hexo">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Emacs Tramp Mode</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://jcai.info" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Jacky Cai</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/emacs/"><i class="far fa-folder fa-fw"></i>Emacs</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-20">2020-07-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 959 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/emacs-trump-mode/" class="leancloud_visitors" data-flag-title="Emacs Tramp Mode">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
-        </div><div class="featured-image"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/images/Migrate-from-wordpress.jpg"
-        data-srcset="/images/Migrate-from-wordpress.jpg, /images/Migrate-from-wordpress.jpg 1.5x, /images/Migrate-from-wordpress.jpg 2x"
-        data-sizes="auto"
-        alt="/images/Migrate-from-wordpress.jpg"
-        title="/images/Migrate-from-wordpress.jpg" /></div><div class="details toc" id="toc-static"  kept="">
+        </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#从wordpress中导出">从Wordpress中导出</a></li>
-    <li><a href="#导入到hexo中">导入到Hexo中</a>
+    <li><a href="#emacs-tramp-mode">Emacs Tramp Mode</a>
       <ul>
-        <li><a href="#安装插件">安装插件</a></li>
-        <li><a href="#执行导入插件">执行导入插件</a></li>
+        <li><a href="#偷懒用法">偷懒用法</a></li>
+        <li><a href="#高级用法">高级用法</a></li>
       </ul>
     </li>
-    <li><a href="#重新生成发布">重新生成、发布</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p><a href="/how-to-blog-with-hexo-over-github/" rel="">上一篇文章</a>里我介绍了怎样用Hexo在Github上搭建静态博客。</p>
-<p>有很多人之前可能都在其它地方用Wordpress写过博客，而且里面可能已经有不少文章了。那要如何才能把文章转到这个新的博客上呢？</p>
-<p>这篇文章就是介绍如何把博客从Wordpress迁移到Hexo.</p>
-<h2 id="从wordpress中导出">从Wordpress中导出</h2>
-<p>首先，我们要把现有的文章从Wordpress中导出。</p>
-<ol>
+            </div><div class="content" id="content"><h2 id="emacs-tramp-mode">Emacs Tramp Mode</h2>
+<p>日常用Emacs的同学可能很多都是开机打开Emacs就不关的，或者干脆就是用Emacs的Daemon模式，每次要用就开一个<code>emacsclient</code>。这时经常会碰到的一个问题就是提权编辑。编辑配置文件时经常要用root权限。一般我们会用sudo或su提权，比始<code>sudo emacs /etc/...</code>，这会需要另外打开一个Emacs进程。</p>
+<p>Emacs 里面默认带有一个包TRAMP (Transparent Remote Access, Multiple Protocols)允许我们在emacs里面进行提权，甚至可以打开其它机器里面的文件，不需要再另开Emacs。</p>
+<p>下面是具体的用法。</p>
+<ul>
 <li>
-<p>登入Wordpress后台。</p>
+<p>用root用户打开本地文件(以<code>/etc/host</code>/为例)。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 使用sudo</span>
+C-x C-f /sudo::/etc/host
+<span class="c1"># 或使用su</span>
+C-x C-f /su::/etc/host
+</code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">必需要有两个冒号</div>
+        </div>
+    </div>
 </li>
 <li>
-<p>左侧菜单里面选<em>工具</em>-&gt;<em>导出</em>。</p>
+<p>用其它用户<code>otheruser</code>打开本地文件<code>/home/otheruser/otherfile</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 使用su</span>
+C-x C-f /su:otheruser@localhost:/home/otheruser/otherfile
+<span class="c1"># 或使用sudo</span>
+C-x C-f /sudo:otheruser@localhost:/home/otheruser/otherfile
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>通过SSH打开其它机器<code>remotehost</code>上的文件<code>~/.profile</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">C-x C-f /ssh:remoteuser@remotehost:~/.profile
+<span class="c1"># 此处可用绝对路径或相对路径（相对于ssh登录后的默认目录，一般为用户主目录）</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="偷懒用法">偷懒用法</h3>
+<p>可能有同学就会问了，一般情况我只需要用<code>sudo</code>，或者相反，经常要用<code>ssh</code>到某一台特定的服务器上，有没有什么可以偷懒的办法？有的！Tramp支持设置默认方法<code>tramp-default-method</code>，默认用户名<code>tramp-default-user</code>，默认机器名<code>tramp-default-host</code>。初始设置中默认方法为<code>scp</code>, 默认用户名为空，默认机器名为本机名。下面为设置默认值的办法。把下面这段加到<code>.emacs</code>或<code>~/.emacs.d/init.el</code>中。支持的method参看<a href="https://www.gnu.org/software/emacs/manual/html_node/tramp/Inline-methods.html#Inline-methods" target="_blank" rel="noopener noreffer">Inline methods</a> 和<a href="https://www.gnu.org/software/emacs/manual/html_node/tramp/External-methods.html#External-methods" target="_blank" rel="noopener noreffer">External methods</a> 。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;; 设置默认方法为ssh. </span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">tramp-default-method</span> <span class="s">&#34;ssh&#34;</span><span class="p">)</span>
+<span class="c1">;; 设置默认用户名为user1.</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">tramp-default-user</span> <span class="s">&#34;user1&#34;</span><span class="p">)</span>
+<span class="c1">;;设置默认主机名为remotehost.</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">tramp-default-host</span> <span class="s">&#34;remotehost&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>设置完后就可以用缩写了。</p>
+<ul>
+<li>
+<p>省略方法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">C-x C-f /remoteuser@remotehost:remotefile
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>省略用户名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">C-x C-f /ssh:remotehost:remotefile
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>省略方法和用户名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">C-x C-f /remotehost:remotefile
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>省略用户名和主机名（其实上文中sudo的就是这个）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">C-x C-f /ssh::remotefile
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>全部省略</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">C-x C-f /-::remotefile
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="高级用法">高级用法</h3>
+<p>在Emacs 24.3以及之后的版本中，Tramp支持多重连接，每个连接之间通过<code>|</code>相连。</p>
+<ul>
+<li>通过跳板机连接到另一台服务器
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">C-x C-f /ssh:user1@jumphost<span class="p">|</span>ssh:username@remotehost:remotefile
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>在另一台机器中用sudo提权编辑
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">C-x C-f /ssh:remoteuser@remotehost<span class="p">|</span>sudo:remotehost:remotefile
+</code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">此处sudo后面一定要有远端主机名</div>
+        </div>
+    </div>
 </li>
-</ol>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="../images/export-from-wordpress.jpg"
-        data-srcset="../images/export-from-wordpress.jpg, ../images/export-from-wordpress.jpg 1.5x, ../images/export-from-wordpress.jpg 2x"
-        data-sizes="auto"
-        alt="../images/export-from-wordpress.jpg"
-        title="从Wordpress中导出" /></p>
-<ol start="3">
-<li>进入导出页面后选择所有内容。</li>
-</ol>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="../images/export-all.jpg"
-        data-srcset="../images/export-all.jpg, ../images/export-all.jpg 1.5x, ../images/export-all.jpg 2x"
-        data-sizes="auto"
-        alt="../images/export-all.jpg"
-        title="选择所有" /></p>
-<p>4.下载导出的文件。</p>
-<h2 id="导入到hexo中">导入到Hexo中</h2>
-<p>Hexo提供了一个插件可以把Wordpress导出的XML文件导入。</p>
-<h3 id="安装插件">安装插件</h3>
-<p>Hexo的插件也是通过npm来安装的。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ npm install hexo-migrator-wordpress --save
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="执行导入插件">执行导入插件</h3>
-<p>插件安装好后，执行以下命令进行导入。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ hexo migrate wordpress &lt;.xml&gt;   <span class="c1"># &lt;.xml&gt;为Wordpress导出的文件名</span>
-</code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p>此插件进行数据转换时并不完美，在处理Wordpress的分类时有可能会出问题。建议导入完成后手工检查source_ports中生成的所有markdown文件。</p>
-</blockquote>
-<h2 id="重新生成发布">重新生成、发布</h2>
-<p>如<a href="/how-to-blog-with-hexo-over-github/" rel="">上一篇文章</a>所讲，做任何改动后都需要重新生成。导入后执行以下命令重新生成、发布。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ hexo g -d
-</code></pre></td></tr></table>
-</div>
-</div><p>至此文章全部迁移到Hexo。</p>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2017-03-07</span>
+                <span>更新于 2020-07-20</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/migrate-from-wordpress/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/emacs-trump-mode/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://jcai.info/migrate-from-wordpress/" data-title="从Wordpress迁移到Hexo" data-via="jackycxh" data-hashtags="Hexo,Blog,Wordpress"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://jcai.info/migrate-from-wordpress/" data-hashtag="Hexo"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://jcai.info/migrate-from-wordpress/" data-title="从Wordpress迁移到Hexo"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://jcai.info/migrate-from-wordpress/" data-title="从Wordpress迁移到Hexo"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://jcai.info/migrate-from-wordpress/" data-title="从Wordpress迁移到Hexo" data-image="/images/Migrate-from-wordpress.jpg" data-ralateuid="jackycxh"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://jcai.info/emacs-trump-mode/" data-title="Emacs Tramp Mode" data-via="jackycxh" data-hashtags="Emacs"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://jcai.info/emacs-trump-mode/" data-hashtag="Emacs"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://jcai.info/emacs-trump-mode/" data-title="Emacs Tramp Mode"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://jcai.info/emacs-trump-mode/" data-title="Emacs Tramp Mode"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://jcai.info/emacs-trump-mode/" data-title="Emacs Tramp Mode" data-ralateuid="jackycxh"><i class="fab fa-weibo fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hexo/">Hexo</a>,&nbsp;<a href="/tags/blog/">Blog</a>,&nbsp;<a href="/tags/wordpress/">Wordpress</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/emacs/">Emacs</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/how-to-blog-with-hexo-over-github/" class="prev" rel="prev" title="如何使用Hexo在Github上搭建静态博客"><i class="fas fa-angle-left fa-fw"></i>如何使用Hexo在Github上搭建静态博客</a>
-            <a href="/emacs-trump-mode/" class="next" rel="next" title="Emacs Tramp Mode">Emacs Tramp Mode<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/migrate-from-wordpress/" class="prev" rel="prev" title="从Wordpress迁移到Hexo"><i class="fas fa-angle-left fa-fw"></i>从Wordpress迁移到Hexo</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -4,7 +4,14 @@
         <link>https://jcai.info/posts/</link>
         <description>所有文章 | Jacky Cai</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jackycxh@outlook.com (Jacky Cai)</managingEditor>
-            <webMaster>jackycxh@outlook.com (Jacky Cai)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 07 Mar 2017 20:36:42 &#43;0000</lastBuildDate><atom:link href="https://jcai.info/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jackycxh@outlook.com (Jacky Cai)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 20 Jul 2020 15:12:05 &#43;0800</lastBuildDate><atom:link href="https://jcai.info/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Emacs Tramp Mode</title>
+    <link>https://jcai.info/emacs-trump-mode/</link>
+    <pubDate>Mon, 20 Jul 2020 15:12:05 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://jcai.info/emacs-trump-mode/</guid>
+    <description><![CDATA[Emacs Tramp Mode 日常用Emacs的同学可能很多都是开机打开Emacs就不关的，或者干脆就是用Emacs的Daemon模式，每次要用就开一个emacsc]]></description>
+</item><item>
     <title>从Wordpress迁移到Hexo</title>
     <link>https://jcai.info/migrate-from-wordpress/</link>
     <pubDate>Tue, 07 Mar 2017 20:36:42 &#43;0000</pubDate>
@@ -82,14 +89,5 @@ It seems that Cisco has added a check into there upgrade process to prevent you 
     <guid>https://jcai.info/translation-profile_in_srst_mode/</guid>
     <description><![CDATA[In some cases, you may want to populate the calling/called number when remote site fallback to SRST mode. You can add translation-profile in call-manager-fallback as below:
 1 2 3 4  call-manager-fallback translation-profile incoming aaa !!! or translation-profile outgoing bbb   The translation-profile under the call-manager-fallback affect the incoming and outgoing calls to the router from the IP phone. This is a different behavior than when you apply the translation-profile under a dial-peer.]]></description>
-</item><item>
-    <title>HowTo: Use a Bluetooth headset with Ubuntu Jaunty</title>
-    <link>https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/</link>
-    <pubDate>Sun, 26 Jul 2009 18:21:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://jcai.info/howto-use-a-bluetooth-headset-with-ubuntu-jaunty/</guid>
-    <description><![CDATA[HowTo: Use a Bluetooth headset with Ubuntu Jaunty - Overclockers Australia Forums
-At the risk of self-appointing myself tech support for this, I present an updated version of my Bluetooth headset with Ubuntu Hardy guide, this time for Ubuntu Jaunty 9.04.
-This HowTo illustrates how to pair and configure a Bluetooth headset with Ubuntu Jaunty 9.04 and redirect your music and media players to it. This guide is based on the guides at Ubuntu Forums with some modifications to be more step-explicit and thus newbie-friendly and reflects the changes to the Bluetooth stack since my original Hardy instruction.]]></description>
 </item></channel>
 </rss>
