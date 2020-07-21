@@ -10,7 +10,7 @@ tags:
 
 日常用Emacs的同学可能很多都是开机打开Emacs就不关的，或者干脆就是用Emacs的Daemon模式，每次要用就开一个`emacsclient`。这时经常会碰到的一个问题就是提权编辑。编辑配置文件时经常要用root权限。一般我们会用sudo或su提权，比始`sudo emacs /etc/...`，这会需要另外打开一个Emacs进程。
 
-Emacs 里面默认带有一个包TRAMP (Transparent Remote Access, Multiple Protocols)允许我们在emacs里面进行提权，甚至可以打开其它机器里面的文件，不需要再另开Emacs。
+Emacs 里面默认带有一个包TRAMP (Transparent Remote Access, Multiple Protocols)允许我们在emacs里面进行提权，甚至可以打开其它机器里面的文件，不需要再另外打开Emacs。
 
 ## 使用方法
 
