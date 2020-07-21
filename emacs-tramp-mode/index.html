@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Emacs Tramp Mode - Jacky Cai</title><meta name="Description" content="All about Jacky Cai"><meta property="og:title" content="Emacs Tramp Mode" />
-<meta property="og:description" content="Emacs Tramp Mode 日常用Emacs的同学可能很多都是开机打开Emacs就不关的，或者干脆就是用Emacs的Daemon模式，每次要用就开一个emacsc" />
+<meta property="og:description" content="日常用Emacs的同学可能很多都是开机打开Emacs就不关的，或者干脆就是用Emacs的Daemon模式，每次要用就开一个emacsclie" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jcai.info/emacs-tramp-mode/" />
 <meta property="og:image" content="https://jcai.info/logo.png"/>
@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="https://jcai.info/logo.png"/>
 
 <meta name="twitter:title" content="Emacs Tramp Mode"/>
-<meta name="twitter:description" content="Emacs Tramp Mode 日常用Emacs的同学可能很多都是开机打开Emacs就不关的，或者干脆就是用Emacs的Daemon模式，每次要用就开一个emacsc"/>
+<meta name="twitter:description" content="日常用Emacs的同学可能很多都是开机打开Emacs就不关的，或者干脆就是用Emacs的Daemon模式，每次要用就开一个emacsclie"/>
 <meta name="application-name" content="Jacky Cai">
 <meta name="apple-mobile-web-app-title" content="Jacky Cai"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/jcai.info\/emacs-tramp-mode\/"
-        },"image": ["https:\/\/jcai.info\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Emacs","wordcount":  959 ,
+        },"image": ["https:\/\/jcai.info\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Emacs","wordcount":  960 ,
         "url": "https:\/\/jcai.info\/emacs-tramp-mode\/","datePublished": "2020-07-20T15:12:05+08:00","dateModified": "2020-07-20T15:12:05+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Jacky Cai","logo": "https:\/\/jcai.info\/images\/avatar.png"},"author": {
@@ -124,7 +124,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Emacs Tramp Mode</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://jcai.info" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Jacky Cai</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/emacs/"><i class="far fa-folder fa-fw"></i>Emacs</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-20">2020-07-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 959 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-20">2020-07-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 960 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/emacs-tramp-mode/" class="leancloud_visitors" data-flag-title="Emacs Tramp Mode">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -135,17 +135,14 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#emacs-tramp-mode">Emacs Tramp Mode</a>
-      <ul>
-        <li><a href="#偷懒用法">偷懒用法</a></li>
-        <li><a href="#高级用法">高级用法</a></li>
-      </ul>
-    </li>
+    <li><a href="#使用方法">使用方法</a></li>
+    <li><a href="#偷懒用法">偷懒用法</a></li>
+    <li><a href="#高级用法">高级用法</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="emacs-tramp-mode">Emacs Tramp Mode</h2>
-<p>日常用Emacs的同学可能很多都是开机打开Emacs就不关的，或者干脆就是用Emacs的Daemon模式，每次要用就开一个<code>emacsclient</code>。这时经常会碰到的一个问题就是提权编辑。编辑配置文件时经常要用root权限。一般我们会用sudo或su提权，比始<code>sudo emacs /etc/...</code>，这会需要另外打开一个Emacs进程。</p>
+            </div><div class="content" id="content"><p>日常用Emacs的同学可能很多都是开机打开Emacs就不关的，或者干脆就是用Emacs的Daemon模式，每次要用就开一个<code>emacsclient</code>。这时经常会碰到的一个问题就是提权编辑。编辑配置文件时经常要用root权限。一般我们会用sudo或su提权，比始<code>sudo emacs /etc/...</code>，这会需要另外打开一个Emacs进程。</p>
 <p>Emacs 里面默认带有一个包TRAMP (Transparent Remote Access, Multiple Protocols)允许我们在emacs里面进行提权，甚至可以打开其它机器里面的文件，不需要再另开Emacs。</p>
+<h2 id="使用方法">使用方法</h2>
 <p>下面是具体的用法。</p>
 <ul>
 <li>
@@ -204,7 +201,7 @@ C-x C-f /sudo:otheruser@localhost:/home/otheruser/otherfile
 </div>
 </div></li>
 </ul>
-<h3 id="偷懒用法">偷懒用法</h3>
+<h2 id="偷懒用法">偷懒用法</h2>
 <p>可能有同学就会问了，一般情况我只需要用<code>sudo</code>，或者相反，经常要用<code>ssh</code>到某一台特定的服务器上，有没有什么可以偷懒的办法？有的！Tramp支持设置默认方法<code>tramp-default-method</code>，默认用户名<code>tramp-default-user</code>，默认机器名<code>tramp-default-host</code>。初始设置中默认方法为<code>scp</code>, 默认用户名为空，默认机器名为本机名。下面为设置默认值的办法。把下面这段加到<code>.emacs</code>或<code>~/.emacs.d/init.el</code>中。支持的method参看<a href="https://www.gnu.org/software/emacs/manual/html_node/tramp/Inline-methods.html#Inline-methods" target="_blank" rel="noopener noreffer">Inline methods</a> 和<a href="https://www.gnu.org/software/emacs/manual/html_node/tramp/External-methods.html#External-methods" target="_blank" rel="noopener noreffer">External methods</a> 。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -216,7 +213,7 @@ C-x C-f /sudo:otheruser@localhost:/home/otheruser/otherfile
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;; 设置默认方法为ssh. </span>
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;; 设置默认方法为ssh.</span>
 <span class="p">(</span><span class="k">setq</span> <span class="nv">tramp-default-method</span> <span class="s">&#34;ssh&#34;</span><span class="p">)</span>
 <span class="c1">;; 设置默认用户名为user1.</span>
 <span class="p">(</span><span class="k">setq</span> <span class="nv">tramp-default-user</span> <span class="s">&#34;user1&#34;</span><span class="p">)</span>
@@ -282,10 +279,11 @@ C-x C-f /sudo:otheruser@localhost:/home/otheruser/otherfile
 </div>
 </div></li>
 </ul>
-<h3 id="高级用法">高级用法</h3>
+<h2 id="高级用法">高级用法</h2>
 <p>在Emacs 24.3以及之后的版本中，Tramp支持多重连接，每个连接之间通过<code>|</code>相连。</p>
 <ul>
-<li>通过跳板机连接到另一台服务器
+<li>
+<p>通过跳板机连接到另一台服务器</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -295,7 +293,8 @@ C-x C-f /sudo:otheruser@localhost:/home/otheruser/otherfile
 </code></pre></td></tr></table>
 </div>
 </div></li>
-<li>在另一台机器中用sudo提权编辑
+<li>
+<p>在另一台机器中用sudo提权编辑</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
